@@ -78,22 +78,7 @@ VMware ESXi is a hypervisor that allows you to run multiple virtual machines (VM
    - Click on **Virtual Machines** > **Create/Register VM** to start creating new VMs.
    - Follow the wizard to select a guest OS, allocate resources (CPU, RAM, storage), and attach the installation ISO for the operating system.
 
----
 
-#### Troubleshooting Tips:
-1. **Network Issues:**
-   - Ensure the NICs are supported by ESXi.
-   - Verify VLAN configuration if using one.
-   
-2. **USB Boot Issues:**
-   - Ensure the bootable USB drive is correctly created using a tool like Rufus.
-   - Configure the BIOS settings to boot from the correct device.
-
-3. **Storage Not Detected:**
-   - Make sure the storage controller is supported by ESXi.
-   - Check BIOS settings to enable storage devices.
-
----
 
 #### Additional Notes:
 
