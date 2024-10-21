@@ -3,22 +3,17 @@
 ### Add a Licenses
 - click on burger icon > Licenses >  Licenses Tab > Select Host > Assign License.
 
-
 ### Assign a Licenses
 - click on burger icon > Licenses >  Assets Tab > add > Insert and Save.
 
-
-
 4F282-0MLD2-M8869-T89G0-CF240
 0F41K-0MJ4H-M88U1-0C3N0-0A214
-
 
 vSphere Esxi Enterprise Plus Key MY0D2-0L2EN-08EV9-0K27H-1Z010   /   NA618-2V346-M8DH8-W33Z6-A3AJ0   /   JZ2ER-AEJE3-H8DT1-23CQK-8LR76
 
 vCenter License MA44T-AVLEK-PZQ89-L1CQ4-9C62A   /   5A488-DRKE3-H84J9-RU152-AAKH4
 
-
-----------------------------------------------------------------------------------
+---
 
 Updated Key
 
@@ -33,4 +28,4 @@ vSphere Esxi Enterprise Plus Key MY0D2-0L2EN-08EV9-0K27H-1Z010   /   NA618-2V346
 
 vCenter License MA44T-AVLEK-PZQ89-L1CQ4-9C62A   /   5A488-DRKE3-H84J9-RU152-AAKH4
 
-
+---
