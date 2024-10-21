@@ -1,10 +1,18 @@
-**Note:** Liscences in vmware ESXI are added through vcentre if Hosts are connected with vcentre
+**Note:** Licenses for VMware ESXi hosts are managed through vCenter if the hosts are connected to vCenter.
 
-### Add a Licenses
-- click on burger icon > Licenses >  Licenses Tab > Select Host > Assign License.
+### Adding a License:
 
-### Assign a Licenses
-- click on burger icon > Licenses >  Assets Tab > add > Insert and Save.
+1. Click on the **menu** icon (burger icon) > **Licensing** > **Licenses**.
+2. In the **Licenses** tab, click **Add**.
+3. Enter the license key and click **Save**.
+
+### Assigning a License:
+
+1. Click on the **menu** icon > **Licensing** > **Licenses**.
+2. Navigate to the **Assets** tab.
+3. Select the desired host and click **Assign License**.
+
+---
 
 4F282-0MLD2-M8869-T89G0-CF240
 0F41K-0MJ4H-M88U1-0C3N0-0A214
