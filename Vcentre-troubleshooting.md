@@ -4,7 +4,11 @@
 
 ---
 
-## Error vcentre no healty updtream
+### Error: 
+**vcentre no healty upstream**
+
+
+### Solution
 
 1. **Check DNS Configuration**: Ensure that the vCenter server is configured with the correct DNS server settings. You can verify this in the network settings.
 
