@@ -4,8 +4,7 @@
 
 ---
 
-### Error: 
-**vcentre no healty upstream**
+### Error: vcentre no healty upstream
 
 
 ### Solution
