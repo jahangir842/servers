@@ -1,7 +1,7 @@
-### Migrating a Server from VMware Workstation to an ESXi Host
+### Exporting a VM from VMware Workstation to an ESXi Host
 
 #### Overview
-This guide outlines the process of migrating a virtual machine (VM) running Dovecot and Postfix mail server from VMware Workstation to an ESXi host. The migration involves exporting the VM from VMware Workstation, adjusting the OVF file for compatibility, and deploying it on the ESXi host.
+This guide outlines the process of exporting a virtual machine (VM)  from VMware Workstation to an ESXi host. The migration involves exporting the VM from VMware Workstation, adjusting the OVF file for compatibility, and deploying it on the ESXi host.
 
 #### Prerequisites
 - Access to the VMware Workstation where the mail server VM is currently running.
