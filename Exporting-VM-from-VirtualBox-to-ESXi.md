@@ -1,7 +1,3 @@
-Here’s the updated guideline tailored for exporting a VM from **VirtualBox** to an **ESXi Host** instead of VMware Workstation:
-
----
-
 ## Exporting a VM from VirtualBox to an ESXi Host
 
 ### Overview
@@ -14,6 +10,28 @@ This guide outlines the process of migrating a virtual machine (VM) from Virtual
 - Access to the ESXi host (via the web client or vSphere Client).
 - Adequate resources (CPU, memory, storage) on the ESXi host.
 - Basic understanding of VirtualBox, VMware, and Linux command-line usage.
+
+---
+
+### VMX Compatibility Chart
+To ensure the exported VM is compatible with your ESXi host, you must set the appropriate `VirtualSystemType` in the OVF file. Use the table below to determine the correct value:
+
+| **VMX Version** | **Compatible ESXi Versions**             |
+|------------------|------------------------------------------|
+| vmx-04           | ESXi 3.5                                |
+| vmx-07           | ESXi 4.x                                |
+| vmx-08           | ESXi 5.0                                |
+| vmx-09           | ESXi 5.1                                |
+| vmx-10           | ESXi 5.5                                |
+| vmx-11           | ESXi 6.0                                |
+| vmx-13           | ESXi 6.5                                |
+| vmx-17           | ESXi 6.7                                |
+| vmx-18           | ESXi 7.0 (up to Update 1)               |
+| vmx-19           | ESXi 7.0 Update 2 and later             |
+| vmx-20           | ESXi 8.0                                |
+| vmx-21           | ESXi 8.0 (Latest Version, if supported) |
+
+Refer to this table when modifying the OVF file to ensure your VM runs correctly on the target ESXi host.
 
 ---
 
@@ -37,8 +55,8 @@ This guide outlines the process of migrating a virtual machine (VM) from Virtual
    ```bash
    nano /path/to/your-vm.ovf
    ```
-2. Find the `<vssd:VirtualSystemType>` section and ensure it is compatible with your ESXi host. For example:
-   - Change:
+2. Find the `<vssd:VirtualSystemType>` section and ensure it is compatible with your ESXi host. Use the **VMX Compatibility Chart** above for reference.
+   - For example, change:
      ```xml
      <vssd:VirtualSystemType>virtualbox-2.2</vssd:VirtualSystemType>
      ```
@@ -46,7 +64,7 @@ This guide outlines the process of migrating a virtual machine (VM) from Virtual
      ```xml
      <vssd:VirtualSystemType>vmx-17</vssd:VirtualSystemType>
      ```
-     *(Use `vmx-17` for ESXi 6.7, `vmx-21` for ESXi 8.0, etc., depending on your host version.)*
+     *(Use `vmx-17` for ESXi 6.7, `vmx-20` for ESXi 8.0, etc.)*
 
 3. Save and close the file.
 
@@ -94,7 +112,7 @@ This guide outlines the process of migrating a virtual machine (VM) from Virtual
 
 ### Troubleshooting
 - **Unsupported Hardware Family Error**:
-  - Ensure the `<vssd:VirtualSystemType>` in the OVF file matches a version supported by your ESXi host.
+  - Ensure the `<vssd:VirtualSystemType>` in the OVF file matches a version supported by your ESXi host. Refer to the **VMX Compatibility Chart**.
 - **Disk File Issues**:
   - If the exported disk is in `.vdi` format, use `VBoxManage` or a third-party tool to convert it to `.vmdk`:
     ```bash
@@ -107,4 +125,4 @@ This guide outlines the process of migrating a virtual machine (VM) from Virtual
 
 ---
 
-By following these steps, you can successfully migrate a VM from VirtualBox to an ESXi host, ensuring smooth operation of the virtualized environment.
+By following these steps and referring to the compatibility chart, you can successfully migrate a VM from VirtualBox to an ESXi host, ensuring smooth operation of the virtualized environment.
