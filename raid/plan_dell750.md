@@ -4,17 +4,16 @@ Your **Dell 750 server** has:
 - **2× 1TB SSDs**  
 - **4× 2.4TB HDDs**  
 
-#### **1️⃣ Plan RAID Configuration**  
+#### **1️⃣ RAID Configuration for Best Performance & Reliability**  
 
-| Drives | Suggested RAID Level | Purpose |
-|--------|---------------------|---------|
-| 2 × 1TB SSD | **RAID 1** (Mirroring) | VMware ESXi installation & VM datastore for performance |
-| 4 × 2.4TB HDD | **RAID 5 or RAID 10** | VM storage (capacity vs. redundancy trade-off) |
+| Drives       | Suggested RAID Level | Purpose |
+|-------------|---------------------|---------|
+| **2 × 1TB SSD** | **RAID 1** (Mirroring) | ESXi installation + High-performance VM datastore |
+| **4 × 2.4TB HDD** | **RAID 5 or RAID 10** | Bulk VM storage (capacity vs. performance trade-off) |
 
-✅ **RAID 1 for SSDs** (1TB usable) ensures ESXi is redundant and fast.  
-✅ **RAID 5 (7.2TB usable) or RAID 10 (4.8TB usable)** for HDDs balances capacity & fault tolerance.  
+✅ **RAID 1 for SSDs**: ESXi + Performance-focused VMs (databases, critical apps).  
+✅ **RAID 5 (7.2TB) or RAID 10 (4.8TB) for HDDs**: General VM storage with redundancy.  
 
----
 
 #### **2️⃣ Configure RAID in Dell PERC (BIOS)**
 1. **Enter RAID Configuration Utility** (Press `Ctrl+R` during boot).  
